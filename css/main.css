@@ -1,0 +1,98 @@
+ul {
+    list-style: none;
+}
+header {
+    background-image: url(../images/party1.webp);
+    background-size: cover;
+    background-position: center bottom;
+}
+header .inner-box {
+    background-color: rgba(0,0,0,.2);
+}
+nav {
+    display: flex;
+    width: 200px;
+    background-color: rgba(15, 0, 36, 0.522);
+    left: -200px;
+    z-index: 5000;
+}
+nav .close-icon {
+    transition: all .3s;
+    cursor: pointer;
+}
+nav .close-icon:hover {
+    color: rgba(214, 46, 51, 0.4) !important;
+    transform: rotate(45deg) scale(2);
+}
+nav ul li a:hover {
+    color: rgba(214, 46, 51, 0.4) !important;
+}
+nav .toggle-menu-open {
+    cursor: pointer;
+    left: 100%;
+    top: 30%;
+}
+nav .toggle-menu-open:hover {
+    animation: move-right .5s alternate infinite;
+    color: #000 !important;
+}
+@keyframes move-right {
+    from{left: 100%;}
+    to{left: calc(100% + 5px);}
+}
+.singers ul {
+    width: 320px;
+}
+.singers h3 {
+    border: 1px solid rgba(15, 0, 36, 0.122);
+    cursor: pointer;
+}
+.singers p {
+    background-color: rgba(15, 0, 36, 0.522);
+    font-size: .9rem;
+    display: none;
+}
+.singers ul li p.active {
+    display: block;
+}
+@media (max-width: 992px) {
+    .singers ul {
+        width: 75% !important;
+    }
+}
+.counter  {
+    background-image: url(../images/images1.jpg);
+    background-size: cover;
+}
+.counter .inner-box {
+    background-color: rgb(220, 53, 69, .5);
+}
+.counter .box .item {
+    border-radius: 50% 0;
+}
+.contact .icons i {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    transition: all .3s;
+}
+.contact {
+    background-color: rgb(0, 0, 0,.1);
+}
+.contact .icons i:hover {
+    color: rgba(214, 46, 51) !important;
+    transform: rotate(5deg) scale(1.2);
+    background-color: rgba(0,0,0, 0.5);
+    border-bottom-color: rgba(0,0,0, 0.2) !important;
+}
+.contact input,
+.contact textarea {
+    border: 1px solid rgb(0, 0, 0,.1);
+    transition: all .3s;
+}
+.contact input:focus,
+.contact textarea:focus {
+    transform: skew(10deg) scale(1.1);
+    background-color: rgb(134, 183, 254,.2);
+}
