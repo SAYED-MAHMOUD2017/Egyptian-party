@@ -1,13 +1,18 @@
 ul {
     list-style: none;
 }
+header .open-list {
+    color: #dc3545e8;
+}
 header {
     background-image: url(../images/party1.webp);
     background-size: cover;
     background-position: center bottom;
 }
-header .inner-box {
-    background-color: rgba(0,0,0,.2);
+header .content {
+    color: #3a7fd4;
+    background-color: #aeb6e87a !important;
+    box-shadow: 5px 4px 10px #3a7fd4 inset;
 }
 nav {
     display: flex;
@@ -40,17 +45,27 @@ nav .toggle-menu-open:hover {
     from{left: 100%;}
     to{left: calc(100% + 5px);}
 }
+ /* {
+    background-color: #c9dde033;
+} */
+.contact, .singers {
+    background-color: rgb(10 99 116 / 10%);
+}
 .singers ul {
     width: 320px;
 }
 .singers h3 {
     border: 1px solid rgba(15, 0, 36, 0.122);
     cursor: pointer;
+    color: #ffffff;
+    background-color: rgb(41 147 201 / 54%);
 }
 .singers p {
-    background-color: rgba(15, 0, 36, 0.522);
+    background-color: rgb(250 251 246);
     font-size: .9rem;
     display: none;
+    color: #8f1c61 !important;
+    box-shadow: 0px 1px 6px #8bc4e2ad inset;    
 }
 .singers ul li p.active {
     display: block;
@@ -70,16 +85,22 @@ nav .toggle-menu-open:hover {
 .counter .box .item {
     border-radius: 50% 0;
 }
+.contact h2,
+.contact h6 {
+    color: #0d7042;
+}
+.contact p {
+    color: #22524e;
+}
 .contact .icons i {
     width: 40px;
     height: 40px;
     text-align: center;
     line-height: 40px;
     transition: all .3s;
+    color: #3b9cd5;
 }
-.contact {
-    background-color: rgb(0, 0, 0,.1);
-}
+
 .contact .icons i:hover {
     color: rgba(214, 46, 51) !important;
     transform: rotate(5deg) scale(1.2);

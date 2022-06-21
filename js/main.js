@@ -1,11 +1,12 @@
 
+let nav = $("nav")
 $(".toggle-menu-open , .close-icon").click(function () {
-    let widthVal = $("nav").outerWidth();
-    let leftVal = $("nav").css("left");
+    let widthVal = $(nav).outerWidth();
+    let leftVal = $(nav).css("left");
     if(leftVal == "0px") {
-        $("nav").animate({left: `-${widthVal}px`},700);
+        $(nav).animate({left: `-${widthVal}px`},700);
     }else {
-        $("nav").animate({left: `0`},700);
+        $(nav).animate({left: `0`},700);
     }
 })
 
@@ -14,7 +15,7 @@ $(".singers ul li h3").click(function () {
 })
 
 let countDown = new Date("7-18-2022").getTime();
-let counter = setInterval(()=>{
+function counter() {
     let timeNow = new Date().getTime();
     let diffrentTime = countDown - timeNow;
     let days = Math.floor(diffrentTime /1000 / 60 / 60 /24);
@@ -25,7 +26,9 @@ let counter = setInterval(()=>{
     $("#hours").html(`${hours} h`);
     $("#minutes").html(`${minutes} m`);
     $("#seconds").html(`${seconds} s`);
-},1000)
+}
+counter();
+setInterval(counter,1000);
 
 $("textarea").keyup(function () {
     let total = 99;
