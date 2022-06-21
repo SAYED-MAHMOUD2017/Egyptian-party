@@ -26,9 +26,9 @@ function counter() {
     $("#hours").html(`${hours} h`);
     $("#minutes").html(`${minutes} m`);
     $("#seconds").html(`${seconds} s`);
+    let out = setTimeout(counter,1000);
 }
 counter();
-setInterval(counter,1000);
 
 $("textarea").keyup(function () {
     let total = 99;
